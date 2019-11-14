@@ -13,34 +13,19 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class MyGdxGame extends ApplicationAdapter {
 	protected OrthographicCamera camera;
 	protected SpriteBatch batch;
-    Texture img;
     BitmapFont font;
     
     private GameStateManager gsm;
-    boolean checkJump;
-    
-    
-    Actor frog;
-    
-    
-    
 
     @Override
     public void create() {
     	
        batch = new SpriteBatch();
-//        img = new Texture(Gdx.files.internal("frog.png"));
-        gsm = new GameStateManager();
-//
-        Gdx.input.setInputProcessor(
-                new GameInputProcessor()
+       gsm = new GameStateManager();
+       
+       Gdx.input.setInputProcessor(
+    		   new GameInputProcessor()
         );
-//        font = new BitmapFont();
-//        font.setColor(Color.WHITE);
-    	frog = new Actor();
-    	frog.create();
-    	
-
     }
 
     @Override
@@ -50,18 +35,9 @@ public class MyGdxGame extends ApplicationAdapter {
         camera = new OrthographicCamera();
     	camera.setToOrtho(false, 1000, 500);
         batch.begin();
-//        batch.draw(img, x, y);
-//        font.draw(batch, "KaeruJunp", 300, 300);
-//
-//        
-//        
-//       
-        frog.render(batch);
 
         gsm.update(Gdx.graphics.getDeltaTime());
         gsm.draw();
-        
-        
         
         GameKeys.update();
         
@@ -71,6 +47,5 @@ public class MyGdxGame extends ApplicationAdapter {
     @Override
     public void dispose() {
         batch.dispose();
-//        img.dispose();
     }
 }

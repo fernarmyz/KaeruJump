@@ -42,6 +42,9 @@ public class GameStateManager {
             //switch to gameover state
             gameState = new GameOverState(this);
         }
+        
+        gameState.init();
+        
     }
     
     public void update(float dt){

@@ -24,4 +24,10 @@ public class StartState extends GameState{
     }
     public void handleInput(){}
     public void dispose(){}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
 }

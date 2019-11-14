@@ -36,7 +36,7 @@ public class GameStateManager {
         }
         if(state == TUTORIAL){
             //switch to tutorial state
-            gameState = new TutorialState(this);
+             
         }
         if(state == GAMEOVER){
             //switch to gameover state

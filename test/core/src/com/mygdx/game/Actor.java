@@ -107,13 +107,16 @@ public class Actor{
 	
 	public void render(SpriteBatch batch) {
 		
-		sprite_1.draw(batch);
+//		sprite_1.draw(batch);
 		if(GameKeys.isDown(GameKeys.RIGHT)) {
 			sprite_2.draw(batch);
         	
         }
-		if(GameKeys.isDown(GameKeys.LEFT)) {
+		else if(GameKeys.isDown(GameKeys.LEFT)) {
 			sprite_3.draw(batch);
+		
+        }else{
+        	sprite_1.draw(batch);
         	
         }
 		
